@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import Link from '@mui/material/Link';
 
 
 const style = {
@@ -42,11 +41,11 @@ const style = {
             </Typography>
             <img src={recipeJson.input.image} alt=""></img>
 
-
-            <Link id="modal-modal-description" sx={{ mt: 2 }}
-            href = {recipeJson.input.sourceUrl}>
+              <Button 
+              href = {recipeJson.input.sourceUrl} 
+              variant="outlined">
                 Link!
-            </Link>
+              </Button>
           </Box>
           
             

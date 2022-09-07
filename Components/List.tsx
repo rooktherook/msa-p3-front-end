@@ -9,7 +9,9 @@ function List(info: any) {
         <ul>
             {info.input.results.map((item : any, i: any) => (
                 <li >
-                    <RecipeModal 
+                    <RecipeModal
+                    alignItems="center"
+                    justify="center" 
                     input = {item}
                     />
                 </li>

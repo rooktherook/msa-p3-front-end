@@ -1,22 +1,28 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import axios from "axios";
+import axios from 'axios';
 import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import FormGroup from '@mui/material/FormGroup';
 import Button from '@mui/material/Button';
 import List from "../Components/List"
+import { createTheme } from '@mui/material';
 
 
 const Home: NextPage = () => {
-
-
     // State variable for the search input.
     const [Input, setInput] = useState("");
     const [infoJson, setinfoJson] = useState({ results: [{ title: "", image: "", summary:"" }] });
   
     const RECIPE_BASE_URL = "https://api.spoonacular.com/recipes/complexSearch?";
   
+    const buttonScaling = {
+      flex: {
+        xs:'100%',
+        sm:'50%'
+      },
+    }
+
     // Needs a working key.
     const KEY_URL = "apiKey=411d56db68624269b40f7bec7b6cbd4c";
   
@@ -42,8 +48,8 @@ const Home: NextPage = () => {
       <h1>Recipe Renovator</h1>
 
 
-      <div className="Searchbar">
-        <FormGroup>
+      
+        <FormGroup sx = {buttonScaling}>
         <TextField
           id="outlined-basic"
           label="Food"
@@ -66,16 +72,15 @@ const Home: NextPage = () => {
           onClick={e => { search() }}
         >Surpise Me</Button> */}
         </FormGroup>
-      </div>
+      
 
       <div>
-        <p>you searched for {Input}</p>
+        <p className="searchtext">you searched for {Input}</p>
 
         <div id="recipe-result">
           Recipe Results
-          {/* <p>{infoJson.results[0].title}</p>
-          <img src={infoJson.results[0].image}></img> */}
-          <List input={infoJson} />
+          <List 
+          input={infoJson}/>
         </div>
       </div>
     </div>

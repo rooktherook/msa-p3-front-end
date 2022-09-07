@@ -6,6 +6,20 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.Homepage {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column
+}
+
+ul {
+  list-style:none;
+  text-align: center;
+  align-items: center;
+  flex-direction: column
+  }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -23,4 +37,9 @@ a {
     color: white;
     background: black;
   }
+}
+
+
+.searchtext{
+  word-break: break-all;
 }
