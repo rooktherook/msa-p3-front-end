@@ -11,7 +11,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
+    bgcolor: '#282c34',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -41,7 +41,7 @@ const style = {
             </Typography>
             <img src={recipeJson.input.image} alt=""></img>
 
-              <Button 
+              <Button
               href = {recipeJson.input.sourceUrl} 
               variant="outlined">
                 Link!

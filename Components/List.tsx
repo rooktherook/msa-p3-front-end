@@ -3,15 +3,11 @@ import RecipeModal from './RecipeModal'
 
 // App calls this function that Calls an unlisted Representation of the recipes
 function List(info: any) {
-
-
     return (
         <ul>
             {info.input.results.map((item : any, i: any) => (
-                <li >
+                <li id = "linkbutton">
                     <RecipeModal
-                    alignItems="center"
-                    justify="center" 
                     input = {item}
                     />
                 </li>

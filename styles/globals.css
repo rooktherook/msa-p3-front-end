@@ -4,13 +4,15 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #282c34;
+    color: white;
 }
 
 .Homepage {
   display: flex;
   text-align: center;
   align-items: center;
-  flex-direction: column
+  flex-direction: column;
 }
 
 ul {
@@ -40,6 +42,37 @@ a {
 }
 
 
-.searchtext{
+.searchtext {
   word-break: break-all;
+}
+
+
+#linkbutton:hover {
+  animation: effect 0.4s infinite;
+}
+
+@keyframes effect {
+  0% {
+      transform: translateX(0px) rotate(0deg);
+  }
+
+  20% {
+      transform: translateX(-4px) rotate(-4deg);
+  }
+
+  40% {
+      transform: translateX(-2px) rotate(-2deg);
+  }
+
+  60% {
+      transform: translateX(4px) rotate(4deg);
+  }
+
+  80% {
+      transform: translateX(2px) rotate(2deg);
+  }
+
+  100% {
+      transform: translateX(0px) rotate(0deg);
+  }
 }
