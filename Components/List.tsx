@@ -1,12 +1,13 @@
-import Link from '@mui/material/Link';
 import RecipeModal from './RecipeModal'
 
 // App calls this function that Calls an unlisted Representation of the recipes
 function List(info: any) {
+    const input = info.input
+
     return (
         <ul>
-            {info.input.results.map((item : any, i: any) => (
-                <li id = "linkbutton">
+            {input.results.map((item : any, i: any) => (
+                <li key= {i} id = "linkbutton">
                     <RecipeModal
                     input = {item}
                     />
